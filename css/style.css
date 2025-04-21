@@ -1,0 +1,185 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+  
+body {
+    margin: 0;
+    padding: 0;
+    background: #ffeaf4;
+    font-family: 'Comic Sans MS', cursive, sans-serif;
+    color: #ff4d88;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    min-height: 100vh;
+    text-align: center;
+    overflow-x: hidden;
+  }
+  
+  h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    color: #ff66a3;
+  }
+  
+  p {
+    font-size: 1.2rem;
+    max-width: 600px;
+    margin: 0 20px;
+    line-height: 1.6;
+  }
+  
+  .heart {
+    font-size: 3rem;
+    animation: pulse 1.5s infinite;
+    margin: 20px 0;
+  }
+  
+  .note-box {
+    background: #fff0f5;
+    padding: 25px;
+    border-radius: 20px;
+    box-shadow: 0 4px 10px rgba(255, 105, 180, 0.2);
+    margin-top: 30px;
+  }
+  
+  footer {
+    margin-top: 40px;
+    font-size: 0.9rem;
+    color: #cc3366;
+  }
+  
+  #playButton {
+    margin-top: 30px;
+    padding: 12px 25px;
+    background-color: #ff80ab;
+    color: white;
+    border: none;
+    border-radius: 25px;
+    font-size: 1rem;
+    cursor: pointer;
+    box-shadow: 0 4px 8px rgba(255, 105, 180, 0.3);
+    transition: background-color 0.3s ease;
+  }
+  
+  #playButton:hover {
+    background-color: #ff4081;
+  }
+  
+  .falling-heart {
+    position: fixed;
+    top: -30px;
+    font-size: 1.5rem;
+    color: #ff4d88;
+    animation: fall linear infinite;
+    z-index: 999;
+  }
+  
+  @keyframes pulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.1); }
+    100% { transform: scale(1); }
+  }
+  
+  @keyframes fall {
+    0% {
+      transform: translateY(0) rotate(0deg);
+      opacity: 1;
+    }
+    100% {
+      transform: translateY(100vh) rotate(360deg);
+      opacity: 0;
+    }
+  }
+
+  @media (max-width: 600px) {
+    h1 {
+      font-size: 1.8rem;
+    }
+  
+    p {
+      font-size: 1rem;
+      padding: 0 10px;
+    }
+  
+    .note-box {
+      padding: 20px;
+      margin: 20px;
+    }
+  
+    #playButton {
+      padding: 10px 20px;
+      font-size: 0.95rem;
+    }
+  
+    .falling-heart {
+      font-size: 1.2rem;
+    }
+  
+    footer {
+      font-size: 0.8rem;
+      padding: 10px;
+      text-align: center;
+    }
+  
+    body {
+        padding: 20px 10px;
+        align-items: center; /* ✅ Ganti ini */
+        text-align: center;
+      }
+  }
+
+  .mood-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    justify-content: center;
+    margin-top: 30px;
+  }
+  
+  .mood-btn {
+    background-color: #ff80ab;
+    color: white;
+    padding: 12px 20px;
+    border-radius: 25px;
+    font-size: 1.1rem;
+    text-decoration: none;
+    box-shadow: 0 4px 8px rgba(255, 105, 180, 0.3);
+    transition: background-color 0.3s ease;
+  }
+  
+  .mood-btn:hover {
+    background-color: #ff4081;
+  }
+  
+  @media (max-width: 600px) {
+    .mood-buttons {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .mood-btn {
+      width: 80%;
+      text-align: center;
+    }
+  }
+  
+  .back-link {
+    margin-top: 20px;
+  }
+  
+  .back-link a {
+    text-decoration: none;
+    color: #cc3366;
+    font-size: 0.95rem;
+    transition: color 0.3s ease;
+  }
+  
+  .back-link a:hover {
+    color: #ff66a3;
+  }
+  
+  
